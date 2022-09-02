@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Cadastro</title>
+    <link rel="stylesheet" href="styles/Style.css">
+    <Script src="Script/script.js"></Script>
+</head>
+
+<body>
+    <form action="data/bancodetalentos" method="get">
+
+        <header>
+            <h1>Formulario de Cadastro de Curriculo</h1>
+        </header>
+        <div class="content">
+            <h2>Informaçoes Pessoais</h2>
+            <div class="inputs_pes">
+                <label for="nome">
+                    <h3>Nome:</h3>
+                </label>
+                <input placeholder="Lucas Nogueira" type="text" id="name">
+
+                <label for="email">
+                    <h3>Email:</h3>
+                </label>
+                <input placeholder="exemplo@email.com" type="email" id="email">
+
+                <label for="data_nascimento">
+                    <h3>Data Nascimento:</h3>
+                </label>
+                <input type="date" id="data_nascimento">
+
+                <label for="naturalidade">
+                    <h3>Naturalidade:</h3>
+                </label>
+                <input placeholder="Indiano" type="text" id="naturalidade">
+
+                <div id="sexo">
+                    <label for="sexo">
+                        <h3>Sexo:</h3>
+                    </label>
+
+                    <input type="radio" id="sexo" name="sexo">Masculino
+                    <input type="radio" id="sexo" name="sexo">Feminino
+                    <input type="radio" id="sexo" name="sexo">Prefiro não dizer
+                </div>
+            </div>
+        </div>
+
+
+        <div class="content">
+
+            <h2>Experiência Profissional</h2>
+
+            <div class="inputs_exp">
+                <label for="empresa">
+                    <h3>Empresa:</h3>
+                </label>
+                <input type="text" id="empresa" placeholder="Nome Fantasia">
+
+                <label for="cargo">
+                    <h3>Cargo:</h3>
+                </label>
+                <input type="text" id="cargo" placeholder="Pedreito">
+
+                <label for="funcao">
+                    <h3>Função:</h3>
+                </label>
+                <textarea name="funcao" id="funcao" cols="30" rows="10" placeholder="Primcipais ocupações"></textarea>
+            </div>
+            <div>
+                <input type="checkbox" name="atual" id="atual">
+                <label for="atual"><strong>Este é meu trabalho atual</strong></label>
+            </div>
+            <input type="button" onclick="add_experiencia()" value="Adicinar Experiencia">
+        </div>
+        <div class="content">
+
+            <h2>Competencias e Objetivos</h2>
+
+            <form enctype="multipart/form-data" method="post" class="input_comp">
+
+                <div>
+
+                    <label for="instituicao">
+                        <h3>Instituição Certificadora:</h3>
+                    </label>
+                    <input type="text" id="instituicao">
+
+                    <label for="certificado">
+                        <h3>Link ou Arquivo do Certificado:</h3>
+                    </label>
+                    <input type="text">
+                    <input type="file" name="certificado" multiple="multiple">
+                </div>
+
+                <label for="objetivos">
+                    <h3>Objetivo Profissional</h3>
+                </label>
+                <textarea name="Objetivos" id="objetivos" cols="30" rows="10"></textarea>
+            </form>
+        </div>
+        <input type="submit" onclick="valida_envia()">
+    </form>
+</body>
+
+</html>
