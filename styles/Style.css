@@ -1,18 +1,24 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: Verdana, Geneva, sans-serif;    
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+html {
+    background: #c1c3d3;
 }
 
 textarea {
-    min-width: 400px;
-    
-    min-height: 72px;
+    max-width: 500px;
+    min-width: 450px;
+    min-height: 100px;
+    max-height: 150px;
+    border-radius: 10px;
+    padding: 10px;
     
 }
 
 header, footer {
-    background: #1224c3;
     display:flex ;
     justify-content: center;
     align-items: center;
@@ -20,31 +26,74 @@ header, footer {
     height: 150px;
 }
 form {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;    
-    width: 100%;
-    height: auto;    
+    align-items: center;
 }
 
+/* Content ================== */
 .content {
-    display: flex;
+    width: 500px;
+    height: 500px;
+    display:flex;
     flex-direction: column;
-    width: 40%;   
-    height: 350px; 
-    margin: 50px 0px 50px 0px;
-    padding: 20px;
     align-items: center;
     justify-content: center;
+    margin: 50px 0px 50px 0px;
+    background: #f5f5f7;
+    border-radius: 50px;
 }
-#sexo {
+.content input {
+    color: #fff;
+    width: 80%;
+    height: 30px;
+    border-radius: 5px;
+    border-width: 1px;
+    background-color: #032820;
+    margin: 10px 0px 10px 0px;
+    padding: 10px;
+
+}
+
+.content #sexo {
     display: flex;
-    flex-direction: column;
+    width: 450px;
+    align-items: center;
 }
 
 .inputs_pes {
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-input {
+
+
+.inputs_exp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#tb_atual {
+    display: none;
+    justify-content: left;
     width: 100%;
+
+}
+#exp {
+   height: 550px; 
+}
+
+
+#data_nascimento{
+    width: 110px;
+}
+
+
+#sexo {
+    width: 20px;
+}
+#sexo {
+    width: 30px;
 }
