@@ -12,10 +12,12 @@
 
 <body>
 
-    <header>
-        <h1>Formulario de Cadastro de Curriculo</h1>
-    </header>
     <form action="data/bancodetalentos" method="get">
+        <div class="content">
+            <header>
+                <h1>Formulario de Cadastro de Curriculo</h1>
+            </header>
+        </div>
         <div class="content">
             <h2>Informaçoes Pessoais</h2>
             <div class="inputs_pes">
@@ -70,22 +72,16 @@
                 <label for="funcao">
                     <h3>Função:</h3>
                 </label>
-                <textarea name="funcao" id="funcao" cols="30" rows="10" placeholder="Primcipais ocupações"></textarea>
-                <div id="tb_atual">
-                    <input type="checkbox" name="atual" id="atual">
-                    <label for="atual"><strong>Este é meu trabalho atual</strong></label>
-                </div>
-                <input type="button" onclick="add_experiencia()" value="Adicinar Experiencia">
+                <input name="funcao" id="funcao" class="areatexto" placeholder="Primcipais ocupações">                
+                <input type="button" class="button" onclick="add_experiencia()" value="Adicinar Experiencia">
             </div>
         </div>
-        <div class="content">
+        <div class="content" id="Comp_obj">
 
             <h2>Competencias e Objetivos</h2>
 
-            <div>
-
-                <div>
-
+            
+                <div class="content">
                     <label for="instituicao">
                         <h3>Instituição Certificadora:</h3>
                     </label>
@@ -101,10 +97,11 @@
                 <label for="objetivos">
                     <h3>Objetivo Profissional</h3>
                 </label>
-                <textarea name="Objetivos" id="objetivos" cols="30" rows="10"></textarea>
+                <input name="Objetivos" id="objetivos" class="areatexto"></input>
             </div>
-        </div>
-        <input type="submit" onclick="valida_envia()">
+            <div class="content">
+                <input type="submit" class="button" onclick="valida_envia()">
+            </div>
     </form>
 </body>
 
