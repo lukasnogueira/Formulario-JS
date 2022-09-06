@@ -1,8 +1,5 @@
 function valida_envia(form) {
     let validation = ['name', 'email', 'data_nascimento', 'naturalidade', 'empresa', 'cargo', 'funcao', 'Comp_obj', 'instituicao']
-    let validaradius = ['masculino', 'feminino', 'pfnd']
-
-    let sexo = ''
     let msg = ''
 
     console.log('0')
@@ -12,17 +9,8 @@ function valida_envia(form) {
             msg += 'Faltou preencher o campo' + ' ' + validation[i] + '\n'
         }
     }
-
-   for (j in validaradius) {
-        if (!$("input[name='sexo']:checked").length) {
-            sexo = 'ok'
-        }
-        console.log(document.querySelector(`#${validaradius}`).checked)
-    }
-    
-
-    
-    if (sexo == '' ) {
+       
+    if (document.querySelector('#sexo').value == '0' ) {
         msg += 'Faltou selecionar o Genero.' + '\n'
     }
 

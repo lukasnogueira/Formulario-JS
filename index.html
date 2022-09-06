@@ -20,37 +20,38 @@
         </div>
         <div class="content">
             <h2>Informaçoes Pessoais</h2>
-            <div class="inputs_pes">
-                <label for="nome">
-                    <h3>Nome:</h3>
+            <label for="nome">
+                <h3>Nome:</h3>
+            </label>
+            <input placeholder="Nome Completo" type="text" id="name">
+
+            <label for="email">
+                <h3>Email:</h3>
+            </label>
+            <input placeholder="exemplo@email.com" type="email" id="email">
+
+            <label for="data_nascimento">
+                <h3>Data Nascimento:</h3>
+            </label>
+            <input type="date" id="data_nascimento">
+
+            <label for="naturalidade">
+                <h3>Naturalidade:</h3>
+            </label>
+            <input placeholder="Pais" type="text" id="naturalidade">
+
+            
+                <label for="sexo">
+                    <h3>Sexo:</h3>
                 </label>
-                <input placeholder="Nome Completo" type="text" id="name">
 
-                <label for="email">
-                    <h3>Email:</h3>
-                </label>
-                <input placeholder="exemplo@email.com" type="email" id="email">
-
-                <label for="data_nascimento">
-                    <h3>Data Nascimento:</h3>
-                </label>
-                <input type="date" id="data_nascimento">
-
-                <label for="naturalidade">
-                    <h3>Naturalidade:</h3>
-                </label>
-                <input placeholder="Indiano" type="text" id="naturalidade">
-
-                <div id="sexo">
-                    <label for="sexo">
-                        <h3>Sexo:</h3>
-                    </label>
-
-                    <input type="radio" class="sexo" name="sexo" id="masculino">Masculino
-                    <input type="radio" class="sexo" name="sexo" id="feminino">Feminino
-                    <input type="radio" class="sexo" name="sexo" id="pfnd">Prefiro não dizer
-                </div>
-            </div>
+                <select class="content" name="sexo" id="sexo">
+                    <option value="0">Selecione uma opção</option>
+                    <option value="1" >Masculino</option>
+                    <option value="2" >Feminino</option>
+                    <option value="3" >Prefiro não dizer</option>
+                </select>
+            
         </div>
 
 
@@ -58,50 +59,50 @@
 
             <h2>Experiência Profissional</h2>
 
-            <div class="inputs_exp">
-                <label for="empresa">
-                    <h3>Empresa:</h3>
-                </label>
-                <input type="text" id="empresa" placeholder="Nome Fantasia">
 
-                <label for="cargo">
-                    <h3>Cargo:</h3>
-                </label>
-                <input type="text" id="cargo" placeholder="Pedreito">
+            <label for="empresa">
+                <h3>Empresa:</h3>
+            </label>
+            <input type="text" id="empresa" placeholder="Nome Fantasia">
 
-                <label for="funcao">
-                    <h3>Função:</h3>
-                </label>
-                <input name="funcao" id="funcao" class="areatexto" placeholder="Principais ocupações">                
-                <input type="button" class="button" onclick="add_experiencia()" value="Adicinar Experiencia">
-            </div>
+            <label for="cargo">
+                <h3>Cargo:</h3>
+            </label>
+            <input type="text" id="cargo" placeholder="Setor">
+
+            <label for="funcao">
+                <h3>Função:</h3>
+            </label>
+            <input name="funcao" id="funcao" class="areatexto" placeholder="Principais ocupações">
+            <input type="button" class="button" onclick="add_experiencia()" value="Adicinar Experiencia">
+
         </div>
         <div class="content" id="Comp_obj">
 
             <h2>Competencias e Objetivos</h2>
 
-            
-                <div class="content">
-                    <label for="instituicao">
-                        <h3>Instituição Certificadora:</h3>
-                    </label>
-                    <input type="text" id="instituicao">
 
-                    <label for="certificado">
-                        <h3>Link ou Arquivo do Certificado:</h3>
-                    </label>
-                    <input type="text">
-                    <input type="file" name="certificado" multiple="multiple">
-                </div>
-
-                <label for="objetivos">
-                    <h3>Objetivo Profissional</h3>
+            <div class="content">
+                <label for="instituicao">
+                    <h3>Instituição Certificadora:</h3>
                 </label>
-                <input name="Objetivos" id="objetivos" class="areatexto"></input>
+                <input type="text" id="instituicao">
+
+                <label for="certificado">
+                    <h3>Link ou Arquivo do Certificado:</h3>
+                </label>
+                <input type="text">
+                <input type="file" name="certificado" id="file">
             </div>
+
+            <label for="objetivos">
+                <h3>Objetivo Profissional</h3>
+            </label>
+            <input type="text" name="Objetivos" id="objetivos" class="areatexto">
             <div class="content">
                 <input type="button" value="Enviar" class="button" onclick="valida_envia()">
             </div>
+        </div>
     </form>
 </body>
 
